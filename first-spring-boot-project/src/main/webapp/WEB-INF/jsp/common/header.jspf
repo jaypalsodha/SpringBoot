@@ -1,0 +1,23 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+<head>
+<title>First web app</title>
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<!-- Step 1) Load D3.js -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<!-- Step 2) Load billboard.js with style -->
+<script src="js/billboard.js"></script>
+<script type="text/javascript" src="js/pie.js"></script>
+
+<!-- Load with base style -->
+<link rel="stylesheet" href="css/billboard.css">
+
+
+<!-- Or load different theme style -->
+<!-- <link rel="stylesheet" href="$YOUR_PATH/theme/insight.css"> -->
+</head>
+
+<body>
