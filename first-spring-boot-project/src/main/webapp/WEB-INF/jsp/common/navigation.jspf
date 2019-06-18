@@ -1,6 +1,6 @@
 <nav role="navigation" class="navbar navbar-default">
 	<div>
-		<a href="http://www.myself.com" class="navbar-brand">My Spring</a>
+		<a href="/" class="navbar-brand">My Spring</a>
 	</div>
 	<div class="navbar-collapse">
 		<ul class="nav navbar-nav">
