@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
 
-	@RequestMapping("/logins")
+	@RequestMapping("/login")
 	public String loginController(@RequestParam String parameter, ModelMap modelMap) {
 		System.out.println(parameter);
 		modelMap.put("login", parameter);
 		return "login";
 	}
+
 	@RequestMapping("/bilBoard")
 	public String billBoardTest() {
 		return "billBoard";

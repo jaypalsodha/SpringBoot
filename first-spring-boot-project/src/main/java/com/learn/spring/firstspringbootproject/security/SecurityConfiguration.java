@@ -7,20 +7,16 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-	//create default user
+	// create default user
 	@Autowired
 	public void configureGlobalSecurity(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
-		authenticationManagerBuilder.inMemoryAuthentication().withUser("jaypal")
-		.password("123")
-		.roles("USER","ADMIN");
+		authenticationManagerBuilder.inMemoryAuthentication().withUser("jaypal").password("123").roles("USER", "ADMIN");
 	}
+
 	public void configure(HttpSecurity http) throws Exception {
-		http
-			.authorizeRequests().antMatchers("/login").permitAll()
-			.antMatchers("/","/*todo*/**").access("hasRole('USER')")				
-				.and()
-			.formLogin();
+		http.authorizeRequests().antMatchers("/login").permitAll().antMatchers("/", "/*todo*/**")
+				.access("hasRole('USER')").and().formLogin();
 	}
 }
